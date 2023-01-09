@@ -3,22 +3,20 @@
 This is unlock boxes
 """
 def canUnlockAll(boxes):
-    # Set of boxes that are unlocked
-    unlocked_boxes = {0}
-    # Queue of boxes that we need to check
+    # Set to keep track of which boxes have been opened
+    opened = set()
+    # Start with the first box
+    opened.add(0)
+    # Create a queue to perform a breadth-first search
     queue = [0]
 
-    # Perform a breadth-first search
+    # Perform a breadth-first search to find all the keys
     while queue:
-        # Take the first box from the queue
         box = queue.pop(0)
-        # Open all the boxes that can be opened
         for key in boxes[box]:
-            if key not in unlocked_boxes:
-                # Mark the box as unlocked
-                unlocked_boxes.add(key)
-                # Add the box to the queue
+            if key not in opened:
+                opened.add(key)
                 queue.append(key)
 
-    # Check if all boxes are unlocked
-    return len(unlocked_boxes) == len(boxes)
+    # Return whether all the boxes have been opened
+    return len(opened) == len(boxes)
