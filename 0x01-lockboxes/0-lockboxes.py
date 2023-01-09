@@ -2,21 +2,19 @@
 """
 This is unlock boxes
 """
-def canUnlockAll(boxes):
-    # Set to keep track of which boxes have been opened
-    opened = set()
-    # Start with the first box
-    opened.add(0)
-    # Create a queue to perform a breadth-first search
-    queue = [0]
 
-    # Perform a breadth-first search to find all the keys
-    while queue:
-        box = queue.pop(0)
-        for key in boxes[box]:
-            if key not in opened:
-                opened.add(key)
-                queue.append(key)
-
-    # Return whether all the boxes have been opened
-    return len(opened) == len(boxes)
+    '''Checks if all the boxes in a list of boxes containing the keys
+    (indices) to other boxes can be unlocked given that the first
+    box is unlocked.
+    '''
+    n = len(boxes)
+    seen_boxes = set([0])
+    unseen_boxes = set(boxes[0]).difference(set([0]))
+    while len(unseen_boxes) > 0:
+        boxIdx = unseen_boxes.pop()
+        if not boxIdx or boxIdx >= n or boxIdx < 0:
+            continue
+        if boxIdx not in seen_boxes:
+            unseen_boxes = unseen_boxes.union(boxes[boxIdx])
+            seen_boxes.add(boxIdx)
+    return n == len(seen_boxes)
