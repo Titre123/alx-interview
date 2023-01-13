@@ -26,4 +26,3 @@ def minOperations(n):
             operation += 7
             n = n / 7
     return operation
-  
