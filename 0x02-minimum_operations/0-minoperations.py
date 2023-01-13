@@ -10,7 +10,7 @@ def minOperations(n):
     Args: n
     '''
     operation = 0
-    if n == 1 or not isinstance(n, int):
+    if n <= 1 or not isinstance(n, int):
         return 0
     while n > 1:
         if(n % 2 == 0):
@@ -25,4 +25,7 @@ def minOperations(n):
         elif (n % 7 == 0):
             operation += 7
             n = n / 7
+        else:
+            operation += n
+            n = n / n
     return operation
