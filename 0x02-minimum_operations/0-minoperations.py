@@ -13,11 +13,11 @@ def minOperations(n):
     if n <= 1 or not isinstance(n, int):
         return 0
     while n > 1:
-        for x in range(2,50000):
-            if (n % x == 0):
+        for x in range(2, 50000):
+            if n % x == 0:
                 operation += x
-                n = n/x
+                n = n / x
                 break
     # if (n > 1):
-    #     operation += n
+    # operation += n
     return operation
