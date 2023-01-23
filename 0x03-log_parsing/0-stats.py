@@ -79,7 +79,6 @@ def run():
             if line_num % 10 == 0:
                 print_statistics(total_file_size, status_codes_stats)
     except (KeyboardInterrupt, EOFError):
-        print('Keybord Ctrl + C')
         print_statistics(total_file_size, status_codes_stats)
 
 
