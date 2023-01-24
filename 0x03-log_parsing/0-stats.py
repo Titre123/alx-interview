@@ -15,7 +15,8 @@ for line in lines:
     number += 1
     # parse the line of the standard input
     parsed_list = line.split()[7:9]
-    status = int(parsed_list[0])
+    if parsed_list != [] or parsed_list != None:
+        status = int(parsed_list[0])
 
     if status in status_code:
         size += int(parsed_list[1])
