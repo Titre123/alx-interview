@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 '''0-state is script to parse log'''
 import sys
 
