@@ -13,15 +13,18 @@ if len(lines) == 0:
     print('File size: 0')
 for line in lines:
     number += 1
+    print(number)
     # parse the line of the standard input
-    parsed_list = line.split()[7:9]
+    listed = line.split()
+    if len(listed) < 6:
+        continue
+    parsed_list = listed[len(listed) - 2:len(listed)]
+
     if parsed_list != []:
         try:
             status = int(parsed_list[0])
         except ValueError:
             status = parsed_list[0]
-    else:
-        continue
 
     if status in status_code:
         size += int(parsed_list[1])
@@ -31,7 +34,6 @@ for line in lines:
             status_count[status] = 1
     else:
         size += int(parsed_list[1])
-
 
     try:
         if number % 10 == 0 or number == len(lines):
