@@ -13,7 +13,6 @@ if len(lines) == 0:
     print('File size: 0')
 for line in lines:
     number += 1
-    print(number)
     # parse the line of the standard input
     listed = line.split()
     if len(listed) < 6:
