@@ -37,12 +37,8 @@ def get_input():
 
 
 def is_attacking(pos0, pos1):
-    """Checks if the positions of two queens are in an attacking mode.
-    Args:
-        pos0 (list or tuple): The first queen's position.
-        pos1 (list or tuple): The second queen's position.
-    Returns:
-        bool: True if the queens are in an attacking position else False.
+    """
+        check if two queen are attacking
     """
     if (pos0[0] == pos1[0]) or (pos0[1] == pos1[1]):
         return True
@@ -51,10 +47,6 @@ def is_attacking(pos0, pos1):
 
 def group_exists(group):
     """Checks if a group exists in the list of solutions.
-    Args:
-        group (list of integers): A group of possible positions.
-    Returns:
-        bool: True if it exists, otherwise False.
     """
     global solutions
     for stn in solutions:
