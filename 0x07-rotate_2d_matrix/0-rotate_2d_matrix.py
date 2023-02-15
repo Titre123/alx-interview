@@ -2,6 +2,8 @@
 '''
     ALx Interview Question to rotate a 2-D matrix
 '''
+
+
 def rotate_2d_matrix(matrix):
     '''
         Set the matrix index
@@ -26,11 +28,3 @@ def rotate_2d_matrix(matrix):
     for ele in mater:
         ind = mater.index(ele)
         matrix[ind] = ele
-
-# matrix = [[1,2,3,4],
-#         [5,6,7],
-#         [9,10,11,12],
-#         [13,14,15,16]]
-
-# rotate_2d_matrix(matrix)
-# print(matrix)
