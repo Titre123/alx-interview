@@ -28,7 +28,7 @@ Prototype: def makeChange(coins, total)
 ```
 
 ## Credit
-![Taiwo Ola-Balogun]()
-![Email](taiwotriumphant@gmail.com)
-![LinkedIn](linkedin.com/taiwotriumphant)
-![twitter](twitter.com/dumbdev)
+[Taiwo Ola-Balogun]()
+[Email](taiwotriumphant@gmail.com)
+[LinkedIn](linkedin.com/taiwotriumphant)
+[twitter](twitter.com/dumbdev)
