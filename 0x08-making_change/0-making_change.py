@@ -28,7 +28,7 @@ def makeChange(coins, total):
     i = 0
     while total > 0:
         coin = sorted_coins[i]
-        if coin < total:
+        if coin <= total:
             total = total - coin
         count = count + 1
         if i == len(coins) - 1 and total < coin:
@@ -36,3 +36,5 @@ def makeChange(coins, total):
         if total < coin:
             i = i + 1
     return count
+
+print(makeChange([1, 2, 25], 37))
