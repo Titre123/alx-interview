@@ -36,5 +36,3 @@ def makeChange(coins, total):
         if total < coin:
             i = i + 1
     return count
-
-print(makeChange([1, 2, 25], 37))
