@@ -23,17 +23,18 @@ def makeChange(coins, total):
     '''
     if total <= 0:
         return 0
-    rem = total
-    coins_count = 0
-    coin_idx = 0
-    sorted_coins = sorted(coins, reverse=True)
-    n = len(coins)
-    while rem > 0:
-        if coin_idx >= n:
+    sorted_coins = list(reversed(sorted(coins)))
+    count = 0
+    i = 0
+    while total > 0:
+        coin = sorted_coins[i]
+        if i == len(coins) - 1 and total - coin < coin:
             return -1
-        if rem - sorted_coins[coin_idx] >= 0:
-            rem -= sorted_coins[coin_idx]
-            coins_count += 1
-        else:
-            coin_idx += 1
-    return coins_count
+        if coin <= total:
+            total = total - coin
+            count = count + 1
+        if total < coin and i != len(coins) - 1:
+            i = i + 1
+    return count
+
+print(makeChange([1256, 54, 48, 16, 102], 1453))
