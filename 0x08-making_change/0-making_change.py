@@ -14,10 +14,7 @@
 '''
 
 
-from typing import List
-
-
-def makeChange(coins: List, total: int) -> int:
+def makeChange(coins, total):
     '''
         Args:
             - coins: list
