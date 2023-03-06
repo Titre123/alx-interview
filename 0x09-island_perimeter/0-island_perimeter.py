@@ -20,10 +20,18 @@ def island_perimeter(grid):
             cell = arr[j]
             if (cell == 1):
                 cell_perimeter = 4
-                left_side = arr[j - 1]
-                right_side = arr[j + 1]
-                top = grid[i - 1][j]
-                bottom = grid[i + 1][j]
+                left_side = 0
+                right_side = 0
+                top = 0
+                bottom = 0
+                if j != 0:
+                    left_side = arr[j - 1]
+                if j < len(arr) -1:
+                    right_side = arr[j + 1]
+                if i != 0:
+                    top = grid[i - 1][j]
+                if i < len(grid) - 1:
+                    bottom = grid[i + 1][j]
                 other_pos = [top, bottom, left_side, right_side]
                 if(other_pos.count(1) == 4):
                     cell_perimeter -= other_pos.count(1)
@@ -37,3 +45,5 @@ def island_perimeter(grid):
             j = j + 1
         i = i + 1
     return perimeter
+
+print(island_perimeter([[0, 0, 0, 0, 0, 0],[0, 1, 1, 1, 0, 0],[0, 1, 1, 1, 0, 0],[0, 1, 1, 1, 0, 0]]))
