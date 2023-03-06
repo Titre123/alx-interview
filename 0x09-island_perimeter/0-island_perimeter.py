@@ -45,5 +45,3 @@ def island_perimeter(grid):
             j = j + 1
         i = i + 1
     return perimeter
-
-print(island_perimeter([[0, 0, 0, 0, 0, 0],[0, 1, 1, 1, 0, 0],[0, 1, 1, 1, 0, 0],[0, 1, 1, 1, 0, 0]]))
