@@ -26,7 +26,7 @@ def island_perimeter(grid):
                 bottom = 0
                 if j != 0:
                     left_side = arr[j - 1]
-                if j < len(arr) -1:
+                if j < len(arr) - 1:
                     right_side = arr[j + 1]
                 if i != 0:
                     top = grid[i - 1][j]
