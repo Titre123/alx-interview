@@ -98,4 +98,4 @@ def isWinner(x, nums):
     elif winners.count('Maria') > x / 2:
         return 'Maria'
     else:
-        return None
+        return 'Draw'
