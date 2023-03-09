@@ -87,7 +87,7 @@ def isWinner(x, nums):
         x: int,
         nums: int
     '''
-    if (type(nums) != list):
+    if (type(nums) != list) or x != len(nums):
         return None
     winners = []
     for num in nums:
@@ -101,3 +101,5 @@ def isWinner(x, nums):
         return 'Maria'
     else:
         return None
+
+print("Winner: {}".format(isWinner(4, [1, 4, 7, 2, 5])))
