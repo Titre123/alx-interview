@@ -88,7 +88,7 @@ def isWinner(x, nums):
         nums: int
     '''
     winners = []
-    for num in array:
+    for num in nums:
         if num != 1:
             winners.append(playGame(num))
         else:
