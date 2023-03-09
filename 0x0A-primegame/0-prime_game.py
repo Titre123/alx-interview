@@ -91,12 +91,10 @@ def isWinner(x, nums):
         return None
     winners = []
     for num in nums:
-        if num != 1:
-            winners.append(playGame(num))
-        elif num ==0:
+        if num == 1 or num == 0:
             winners.append('Ben')
         else:
-            winners.append('Ben')
+            winners.append(playGame(num))
     if winners.count('Ben') > x / 2:
         return 'Ben'
     elif winners.count('Maria') > x / 2:
