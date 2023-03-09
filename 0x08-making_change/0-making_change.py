@@ -36,3 +36,5 @@ def makeChange(coins, total):
         if total < coin and i != len(coins) - 1:
             i = i + 1
     return count
+
+print(makeChange([10, 20, 30], 256))
