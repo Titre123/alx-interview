@@ -101,5 +101,3 @@ def isWinner(x, nums):
         return 'Maria'
     else:
         return None
-
-print("Winner: {}".format(isWinner(4, [1, 4, 7, 2, 5])))
