@@ -93,9 +93,9 @@ def isWinner(x, nums):
             winners.append(playGame(num))
         else:
             winners.append('Ben')
-    if winners.count('Ben') > n / 2:
+    if winners.count('Ben') > x / 2:
         return 'Ben'
-    elif winners.count('Maria') > n / 2:
+    elif winners.count('Maria') > x / 2:
         return 'Maria'
     else:
         return 'Draw'
